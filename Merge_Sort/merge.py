@@ -36,10 +36,11 @@ if __name__ == "__main__":
     num_items = 0
     items = []
 
-    input_items = input("Enter your values seperated by a space: ")
+    for line in sys.stdin:
 
-    items = input_items.split()
+        items = line.split()
 
-    items = [ int(x) for x in items ]
-    items = mergeSort(items)
-    print(items)
+        items = [ int(x) for x in items ]
+        items = mergeSort(items)
+        print(items)
+
