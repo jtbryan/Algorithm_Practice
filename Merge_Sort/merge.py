@@ -38,9 +38,10 @@ if __name__ == "__main__":
 
     for line in sys.stdin:
 
+        print("Given this input: " + str(line))
         items = line.split()
 
         items = [ int(x) for x in items ]
         items = mergeSort(items)
-        print(items)
+        print("This is the output: " + str(items))
 
